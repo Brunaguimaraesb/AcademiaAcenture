@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1641389633 source:c:\users\bruna\onedrive\Área de trabalho\treinamento\questao1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
