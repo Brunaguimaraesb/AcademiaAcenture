@@ -19,7 +19,7 @@
 #define ANO_ATUAL 2021
 /*
 *Academia Accenture
-*tividade 2: Menu de opções
+*Atividade 2: Menu de opções
 *Data: 07/01/2022
 *Autor:Bruna Guimarães
 *Função: Criar um menu com dez opções de escolha, e em cada opção contém um uso diferente.
@@ -42,7 +42,8 @@ int main (int argc, char *argv[ ])
 
     int opcao;
 
-    do{
+    do
+    {
     printf("---------------------------------------------------------------------");
     printf("\n\t\tMenu\n");
     printf(" 0 - OPÇÃO 0 -> Exit - Sair do programa \n");
@@ -227,31 +228,36 @@ int main (int argc, char *argv[ ])
                 n--;
             }
             printf("\nO fatorial é: %d! = %d\n",numero,fatorial);
+            printf("\n");
         }
         else
         {
             printf("\nO cálculo do fatorial só se aplica a números naturais.\n");
+            printf("\n");
         }
         system("pause");
         break;
     }
 
-    case 5: // TENTANDO - TA DANDO ERRO
+    case 5: //Ler um string e converter para inteiro os valores contidos em cada posição char e calculando a média dos valores
     {
-        char numero[10];
-
-        printf("Digite um valor com no maximo 10 digitos: ");
-        scanf("%s", numero);
-
-        char *letra = numero;
+        char matriz[10][11];
         int soma = 0;
+        int caractere[10];
+        double media = 0;
 
-        while (*letra!='\0')
-        {
-            soma += (*letra) - '0';
+       for (int i=0; i<10; i++)
+       {
+            printf("\nDigite um valor com no máximo 10 digitos: ");
+            scanf("%s", &matriz[i]);
+            soma += atoi(matriz[i]);
+       }
 
-            letra++;
-        }
+        media = soma/10;
+
+        printf("\nA média dos vetores armazenados no vetor é: %.2f\n", media);
+        printf("\n");
+
         system("pause");
         break;
     }
@@ -283,11 +289,11 @@ int main (int argc, char *argv[ ])
        double matriz[5][3];
        int linha;
        int coluna;
-       int somaLinha;
-       int somaColuna;
+       double somaLinhasImpares;
+       double somaColunasPares;
        double mediaColunasPares;
        double mediaLinhasImpares;
-       double diferencaMedias
+       double diferencaMedias;
 
        printf("\nDigite os valores para os elementos da matriz\n\n");
 
@@ -305,39 +311,28 @@ int main (int argc, char *argv[ ])
            for(coluna=0;coluna<3;coluna++)
            {
                 printf("\nElemento[%d][%d] = %.2lf\n", linha, coluna, matriz[linha][coluna]);
+
+                 if ((coluna%2 == 0)) // Verifica se a coluna é par
+                 {
+                        somaColunasPares = somaColunasPares + matriz[linha][coluna];
+                 }
+                 if (linha%2 != 0) // Verifica se a linha é ímpar
+                 {
+                        somaLinhasImpares = somaLinhasImpares + matriz[linha][coluna];
+                 }
            }
 
        }
-       //soma e média dos valores das colunas pares
-       for (linha=0; linha<5; linha++)
-       {
-            for (coluna=1; coluna==1; coluna++)
-            {
-                somaColuna = somaColuna + matriz[linha][coluna];
-            }
-       }
 
-       mediaColunasPares = somaColuna/1.0;
+       mediaColunasPares = somaColunasPares/2;
 
-       //soma e média dos valores das linhas ímpares
-       for (linha=0; linha<5; linha++)
-       {
-            for (coluna=0; coluna<3; coluna++)
-            {
-                somaLinha = somaLinha + matriz[linha][coluna];
-                }
-            linha++;
-            }
+       mediaLinhasImpares = somaLinhasImpares/2;
 
+       diferencaMedias = mediaColunasPares - mediaLinhasImpares;
 
-            mediaLinhasImpares = somaLinha/3.0;
+       printf("A diferença entre a média da soma das colunas pares e a média da soma das linhas impares é %.2lf", diferencaMedias);
 
-            diferencaMedias = mediaColunasPares - mediaLinhasImpares;
-
-            printf("A diferença entre a média da soma das colunas pares e a média da soma das linhas impares é %d", diferencaMedias);
-
-            system("pause");
-            }
+       printf("\n");
 
        system("pause");
        break;
