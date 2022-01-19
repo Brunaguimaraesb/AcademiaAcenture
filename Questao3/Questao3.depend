@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1642198895 source:c:\users\bruna\onedrive\햞ea de trabalho\treinamento\questao3\funcao.c
+	"funcao.h"
+
+1642263080 source:c:\users\bruna\onedrive\햞ea de trabalho\treinamento\questao3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funcoes.h"
+
+1642199493 c:\users\bruna\onedrive\햞ea de trabalho\treinamento\questao3\funcao.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<time.h>
+	<string.h>
+	<math.h>
+
+1642265775 c:\users\bruna\onedrive\햞ea de trabalho\treinamento\questao3\funcoes.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<time.h>
+	<string.h>
+	<math.h>
+
+1642265781 source:c:\users\bruna\onedrive\햞ea de trabalho\treinamento\questao3\funcoes.c
+	"funcoes.h"
+
